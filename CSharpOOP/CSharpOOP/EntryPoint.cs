@@ -10,8 +10,14 @@ public class EntryPoint
     static void Main()
     {
         Warrior firstWarrior = new Warrior();
+        Console.WriteLine(Warrior.idCounter);
+
         Warrior secondWarrior = new Warrior(185, 93);
+        Console.WriteLine(Warrior.idCounter);
+
         Warrior thirdWarrior = new Warrior(195, 100, "Third Warrior");
+        Console.WriteLine(Warrior.idCounter);
+
         Console.WriteLine(thirdWarrior.Name);
 
         //Warrior theGoodGuy = new Warrior(190, 80, "Good Guy");

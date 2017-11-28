@@ -6,8 +6,8 @@ namespace Characters.Warriors
     public class Warrior
     {
         // fields ========================================================================================
-		public static int id;
-		
+        public static int id;
+
         private int height;
         private int weight;
         private int age;
@@ -89,7 +89,7 @@ namespace Characters.Warriors
             this.Age = 18;
             this.Name = name;
             this.SwordWeapon = new Sword();
-			Warrior.id++;
+            Warrior.id++;
         }
 
         // methods ========================================================================================
