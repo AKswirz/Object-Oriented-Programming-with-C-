@@ -1,0 +1,2 @@
+C:\Users\Ahswircenski\Google Drive\Educational\Udemy\Object Oriented Programming with C#\Magic Destroyers\Magic Destroyers\bin\Debug\Magic Destroyers.exe.config
+C:\Users\Alan\Google Drive\Educational\Udemy\Object Oriented Programming with C#\Magic Destroyers\Magic Destroyers\bin\Debug\Magic Destroyers.exe.config

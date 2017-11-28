@@ -1,0 +1,12 @@
+C:\Users\Darkbound\Documents\Visual Studio 2017\Projects\CSharpOOP\CSharpOOP\bin\Release\CSharpOOP.exe.config
+C:\Users\Darkbound\Documents\Visual Studio 2017\Projects\CSharpOOP\CSharpOOP\bin\Release\CSharpOOP.exe
+C:\Users\Darkbound\Documents\Visual Studio 2017\Projects\CSharpOOP\CSharpOOP\bin\Release\CSharpOOP.pdb
+C:\Users\Darkbound\Documents\Visual Studio 2017\Projects\CSharpOOP\CSharpOOP\obj\Release\CSharpOOP.exe
+C:\Users\Darkbound\Documents\Visual Studio 2017\Projects\CSharpOOP\CSharpOOP\obj\Release\CSharpOOP.pdb
+C:\Users\Darkbound\Documents\Visual Studio 2017\Projects\CSharpOOP\CSharpOOP\obj\Release\CSharpOOP.csprojResolveAssemblyReference.cache
+C:\Users\ahswi\Google Drive\Educational\Udemy\Object Oriented Programming with C#\01. Building Blocks\CSharpOOP\bin\Release\CSharpOOP.exe.config
+C:\Users\ahswi\Google Drive\Educational\Udemy\Object Oriented Programming with C#\01. Building Blocks\CSharpOOP\bin\Release\CSharpOOP.exe
+C:\Users\ahswi\Google Drive\Educational\Udemy\Object Oriented Programming with C#\01. Building Blocks\CSharpOOP\bin\Release\CSharpOOP.pdb
+C:\Users\ahswi\Google Drive\Educational\Udemy\Object Oriented Programming with C#\01. Building Blocks\CSharpOOP\obj\Release\CSharpOOP.csprojResolveAssemblyReference.cache
+C:\Users\ahswi\Google Drive\Educational\Udemy\Object Oriented Programming with C#\01. Building Blocks\CSharpOOP\obj\Release\CSharpOOP.exe
+C:\Users\ahswi\Google Drive\Educational\Udemy\Object Oriented Programming with C#\01. Building Blocks\CSharpOOP\obj\Release\CSharpOOP.pdb
