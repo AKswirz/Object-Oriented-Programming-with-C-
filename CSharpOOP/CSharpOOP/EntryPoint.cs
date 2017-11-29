@@ -1,4 +1,5 @@
 ﻿using Characters.Warriors;
+using CSharpOOP;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,16 +10,23 @@ public class EntryPoint
 {
     static void Main()
     {
-        Warrior firstWarrior = new Warrior();
-        Console.WriteLine(Warrior.idCounter);
+        Warrior firstWarrior = new Warrior();        
+        Console.WriteLine("Counter: " + Warrior.IdCounter);
 
         Warrior secondWarrior = new Warrior(185, 93);
-        Console.WriteLine(Warrior.idCounter);
+        Console.WriteLine("Counter: " + Warrior.IdCounter);
 
         Warrior thirdWarrior = new Warrior(195, 100, "Third Warrior");
-        Console.WriteLine(Warrior.idCounter);
+        Console.WriteLine("Counter: " + Warrior.IdCounter);
+
+
+        Tools.ColorfulWriteLine("ID: " + firstWarrior.ID.ToString(), ConsoleColor.Cyan);
+        Tools.ColorfulWriteLine("ID: " + secondWarrior.ID.ToString(), ConsoleColor.Red);
+        Tools.ColorfulWriteLine("ID: " + thirdWarrior.ID.ToString(), ConsoleColor.Yellow);
 
         Console.WriteLine(thirdWarrior.Name);
+
+        Warrior.GetDefaultValues();
 
         //Warrior theGoodGuy = new Warrior(190, 80, "Good Guy");
 

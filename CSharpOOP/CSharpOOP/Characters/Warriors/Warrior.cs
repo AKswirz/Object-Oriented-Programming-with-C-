@@ -6,15 +6,42 @@ namespace Characters.Warriors
     public class Warrior
     {
         // fields ========================================================================================
-		public static int id;
-		
+        private const int DEFAULT_HEIGHT = 170;
+        private const int DEFAULT_WEIGHT = 70;
+        private const int DEFAULT_AGE = 18;
+        private const string DEFAULT_NAME = "Young Warrior";
+        private readonly Sword DEFAULT_WEAPON = new Sword();
+        private readonly int id;
+
+        private static int idCounter;
+
         private int height;
         private int weight;
         private int age;
         private string name;
         private Sword swordWeapon;
 
-        // properties =====================================================================================
+        // properties ====================================================================================
+        public static int IdCounter
+        {
+            get
+            {
+                return Warrior.idCounter;
+            }
+
+            private set
+            {
+                Warrior.idCounter = value;
+            }
+        }
+
+        public int ID
+        {
+            get
+            {
+                return this.id;
+            }
+        }
         public int Height
         {
             get
@@ -73,29 +100,38 @@ namespace Characters.Warriors
 
         // constructors =====================================================================================
         public Warrior()
-            : this(170, 70)
+            : this(DEFAULT_HEIGHT, DEFAULT_WEIGHT)
         {
         }
 
         public Warrior(int height, int weight)
-            : this(height, weight, "Young Warrior")
+            : this(height, weight, DEFAULT_NAME)
         {
         }
 
         public Warrior(int height, int weight, string name)
         {
+            Warrior.IdCounter++;
+            this.id = Warrior.IdCounter;
             this.Height = height;
             this.Weight = weight;
-            this.Age = 18;
+            this.Age = DEFAULT_AGE;
             this.Name = name;
-            this.SwordWeapon = new Sword();
-			Warrior.id++;
+            this.SwordWeapon = DEFAULT_WEAPON;
         }
 
         // methods ========================================================================================
         public void Greetings(Warrior warrior)
         {
             Console.WriteLine($@"Greetings, {warrior.Name}!");
+        }
+
+        public static void GetDefaultValues()
+        {
+            Console.WriteLine($"Default Height: {DEFAULT_HEIGHT}" +
+                $"\nDefault Weight: {DEFAULT_WEIGHT}" +
+                $"\nDefault Name: {DEFAULT_NAME}" +
+                $"\nDefault Age: {DEFAULT_AGE}");
         }
     }
 }
