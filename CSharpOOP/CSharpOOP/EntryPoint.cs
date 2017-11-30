@@ -1,5 +1,6 @@
 ﻿using Characters.Warriors;
 using CSharpOOP;
+using Enumuations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,12 @@ public class EntryPoint
         Warrior secondWarrior = new Warrior(185, 93);
         Console.WriteLine("Counter: " + Warrior.IdCounter);
 
-        Warrior thirdWarrior = new Warrior(195, 100, "Third Warrior");
+        Warrior thirdWarrior = new Warrior(195, 100);
         Console.WriteLine("Counter: " + Warrior.IdCounter);
 
+        Warrior fourthWarrior = new Warrior(180, 88, "Fourth Warrior", Faction.BadGuy);
+        Console.WriteLine("Counter: " + Warrior.IdCounter);
+        Console.WriteLine(string.Format("Health Points for the {0}: {1}", fourthWarrior.Name, fourthWarrior.HealthPoints));
 
         Tools.ColorfulWriteLine("ID: " + firstWarrior.ID.ToString(), ConsoleColor.Cyan);
         Tools.ColorfulWriteLine("ID: " + secondWarrior.ID.ToString(), ConsoleColor.Red);

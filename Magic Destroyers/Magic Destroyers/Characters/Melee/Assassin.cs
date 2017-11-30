@@ -1,4 +1,5 @@
-﻿using Magic_Destroyers.Equipment.Armors;
+﻿using Enumerations;
+using Magic_Destroyers.Equipment.Armors;
 using Magic_Destroyers.Equipment.Weapons;
 using System;
 using System.Collections.Generic;
@@ -11,12 +12,18 @@ namespace Magic_Destroyers.Characters.Melee
     public class Assassin
     {
         // fields ====================================================================================================
+        private const string DEFAULT_NAME = "Young Assassin";
+        private const int DEFAULT_LEVEL = 1;
+        private const int DEFAULT_HEALTHPOINTS = 75;
+        private const int DEFAULT_FATIGUE = 10;
+        private const int DEFAULT_ABILITYPOINTS = 50;
+
         private string name;
         private int level;
         private int healthPoints;
         private int fatigue;
         private int abilityPoints;
-        private string faction;
+        private Faction faction;
         private Sword weapon;
         private LightLeatherVest bodyArmor;
 
@@ -37,7 +44,7 @@ namespace Magic_Destroyers.Characters.Melee
             }
         }
 
-        public string Faction
+        public Faction Faction
         {
             get { return this.faction; }
             set { this.faction = value; }
@@ -113,12 +120,12 @@ namespace Magic_Destroyers.Characters.Melee
 
         // default constructor ====================================================================================================
         public Assassin()
-            : this("Young Assassin", 1)
+            : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
         }
 
         public Assassin(string name, int level)
-            : this(name, level, 100)
+            : this(name, level, DEFAULT_HEALTHPOINTS)
         {
         }
 
@@ -127,9 +134,9 @@ namespace Magic_Destroyers.Characters.Melee
             this.name = name;
             this.level = level;
             this.healthPoints = healthPoints;
-            this.fatigue = 0;
-            this.abilityPoints = 100;
-            this.faction = "Melee";
+            this.fatigue = DEFAULT_FATIGUE;
+            this.abilityPoints = DEFAULT_ABILITYPOINTS;
+            this.faction = Faction.Melee;
             this.weapon = new Sword();
             this.bodyArmor = new LightLeatherVest();
         }

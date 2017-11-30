@@ -11,6 +11,12 @@ namespace Magic_Destroyers.Characters.Melee
     public class Knight
     {
         // fields ============================================================================================================
+        private const string DEFAULT_NAME = "Young Knight";
+        private const int DEFAULT_LEVEL = 1;
+        private const int DEFAULT_HEALTHPOINTS = 75;
+        private const int DEFAULT_FATIGUE = 10;
+        private const int DEFAULT_ABILITYPOINTS = 50;
+
         private string name;
         private int level;
         private int healthPoints;
@@ -111,12 +117,12 @@ namespace Magic_Destroyers.Characters.Melee
 
         // default constructor ====================================================================================================
         public Knight()
-            : this("Young Knight", 1)
+            : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {
         }
 
         public Knight(string name, int level)
-            : this(name, level, 100)
+            : this(name, level, DEFAULT_HEALTHPOINTS)
 
         {
         }
@@ -126,8 +132,8 @@ namespace Magic_Destroyers.Characters.Melee
             this.name = name;
             this.level = level;
             this.healthPoints = healthPoints;
-            this.fatigue = 0;
-            this.abilityPoints = 100;
+            this.fatigue = DEFAULT_FATIGUE;
+            this.abilityPoints = DEFAULT_ABILITYPOINTS;
             this.faction = "Melee";
             this.weapon = new Hammer();
             this.bodyArmor = new Chainlink();
