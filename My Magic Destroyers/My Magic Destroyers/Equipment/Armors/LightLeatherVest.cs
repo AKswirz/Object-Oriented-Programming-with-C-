@@ -8,7 +8,20 @@ namespace My_Magic_Destroyers.Equipment.Armors
 {
     public class LightLeatherVest
     {
-        public int armorPoints { get; set; }
+		private int armorPoints;
 
-    }
+		public int ArmorPoints
+		{
+			get { return armorPoints; }
+			set
+			{
+				if (value >= 1)
+				{
+					armorPoints = value;
+				}
+				else
+					throw new ArgumentOutOfRangeException(string.Empty, "The Armor Points must be greater than 0.");
+			}
+		} 
+	}
 }

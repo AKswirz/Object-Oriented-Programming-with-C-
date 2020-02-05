@@ -8,11 +8,55 @@ namespace My_Magic_Destroyers.Characters
 {
     public class Character
     {
-        public int abilityPoints { get; set; }
-        public string faction { get; set; }
-        public int healthPoints { get; set; }
-        public int level { get; set; }
-        public string name { get; set; }
+        private int abilityPoints;
+        private string faction;
+        private int healthPoints;
+        private int level;
+        private string name;
+        //private BodyArmor bodyArmor;
+        //private Weapon weapon;
+
+        public int AbilityPoints
+        {
+            get { return abilityPoints; }
+            set { abilityPoints = value; }
+        }
+
+        public string Faction
+        {
+            get { return faction; }
+            set { faction = value; }
+        }
+
+        public int HealthPoints
+        {
+            get { return healthPoints; }
+            set { healthPoints = value; }
+        }
+
+        public int Level
+        {
+            get { return level; }
+            set { level = value; }
+        }
+
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        //public LightLeatherVest BodyArmor
+        //{
+        //    get { return bodyArmor; }
+        //    set { bodyArmor = value; }
+        //}
+
+        //public Sword Weapon
+        //{
+        //    get { return weapon; }
+        //    set { weapon = value; }
+        }
 
         //public BodyArmor bodyArmor { get; set; }
         //public Weapon weapon { get; set; }

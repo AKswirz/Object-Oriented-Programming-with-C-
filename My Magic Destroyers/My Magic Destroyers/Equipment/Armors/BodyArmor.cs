@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace My_Magic_Destroyers.Equipment.Armors
 {
-    public class Chainlink
-	{
+    public class BodyArmor
+    {
 		private int armorPoints;
 
 		public int ArmorPoints
 		{
 			get { return armorPoints; }
-			set 
+			set
 			{
 				if (value >= 1)
 				{
@@ -23,6 +23,5 @@ namespace My_Magic_Destroyers.Equipment.Armors
 					throw new ArgumentOutOfRangeException(string.Empty, "The Armor Points must be greater than 0.");
 			}
 		}
-
-    }
+	}
 }
