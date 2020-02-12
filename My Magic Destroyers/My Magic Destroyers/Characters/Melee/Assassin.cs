@@ -91,17 +91,17 @@ namespace My_Magic_Destroyers.Characters.Melee
 
         public void Raze()
         {
-
+            throw new NotImplementedException();
         }
 
         public void BleedToDeath()
         {
-
+            throw new NotImplementedException();
         }
 
         public void Survival()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

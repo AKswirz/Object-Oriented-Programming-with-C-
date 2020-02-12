@@ -90,17 +90,17 @@ namespace My_Magic_Destroyers.Characters.Melee
         }
         public void HolyBlow()
         {
-
+            throw new NotImplementedException();
         }
 
         public void PurifySoul()
         {
-
+            throw new NotImplementedException();
         }
 
         public void RighteousWings()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

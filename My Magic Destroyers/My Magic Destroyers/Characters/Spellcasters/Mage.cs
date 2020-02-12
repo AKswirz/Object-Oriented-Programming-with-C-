@@ -90,17 +90,17 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
         }
         public void ArcaneWrath()
         {
-
+            throw new NotImplementedException();
         }
 
         public void Firewall()
         {
-
+            throw new NotImplementedException();
         }
 
         public void Meditation()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

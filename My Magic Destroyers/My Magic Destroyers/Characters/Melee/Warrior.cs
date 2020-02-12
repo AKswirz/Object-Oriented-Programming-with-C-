@@ -91,17 +91,17 @@ namespace My_Magic_Destroyers.Characters.Melee
 
         public void Stike()
         {
-
+            throw new NotImplementedException();
         }
 
         public void Execute()
         {
-
+            throw new NotImplementedException();
         }
 
         public void SkinHarden()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

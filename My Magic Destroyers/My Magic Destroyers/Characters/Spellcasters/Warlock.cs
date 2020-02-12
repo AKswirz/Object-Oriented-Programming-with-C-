@@ -93,17 +93,17 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
 
         public void ShadowRage()
         {
-
+            throw new NotImplementedException();
         }
 
         public void VampireTouch()
         {
-
+            throw new NotImplementedException();
         }
 
         public void BoneShield()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

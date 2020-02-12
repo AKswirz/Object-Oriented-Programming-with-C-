@@ -27,7 +27,7 @@ namespace My_Magic_Destroyers.Equipment.Weapons
 
         public void HackNSlash()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

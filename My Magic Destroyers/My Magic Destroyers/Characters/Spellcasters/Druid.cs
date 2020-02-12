@@ -91,17 +91,17 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
 
         public void Moonfire()
         {
-
+            throw new NotImplementedException();
         }
 
         public void Starburst()
         {
-
+            throw new NotImplementedException();
         }
 
         public void OneWithTheNature()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

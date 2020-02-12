@@ -25,7 +25,7 @@ namespace My_Magic_Destroyers.Equipment.Weapons
         }
         public void Stun()
         {
-
+            throw new NotImplementedException();
         }
     }
 }
