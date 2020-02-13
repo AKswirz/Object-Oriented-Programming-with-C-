@@ -56,7 +56,7 @@ namespace My_Magic_Destroyers.Characters
         //{
         //    get { return weapon; }
         //    set { weapon = value; }
-        }
+        //}
 
         //public BodyArmor bodyArmor { get; set; }
         //public Weapon weapon { get; set; }

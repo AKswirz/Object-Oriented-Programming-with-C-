@@ -23,6 +23,11 @@ namespace My_Magic_Destroyers.Equipment.Weapons
                     throw new ArgumentOutOfRangeException(string.Empty, "The Damage must be greater than 0.");
             }
         }
+
+        public Sword()
+        {
+            this.Damage = 10;
+        }
         public void Bloodthirst()
         {
             throw new NotImplementedException();

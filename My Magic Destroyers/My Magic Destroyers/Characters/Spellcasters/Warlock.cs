@@ -20,7 +20,13 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
 
         public Warlock()
         {
-
+            this.AbilityPoints = 10;
+            this.Faction = "SpellCaster";
+            this.HealthPoints = 100;
+            this.Level = 1;
+            this.Name = "Gene Ric";
+            this.BodyArmor = new LightLeatherVest();
+            this.Weapon = new Sword();
         }
 
         public int AbilityPoints

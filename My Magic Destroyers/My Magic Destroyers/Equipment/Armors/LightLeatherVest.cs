@@ -22,6 +22,11 @@ namespace My_Magic_Destroyers.Equipment.Armors
 				else
 					throw new ArgumentOutOfRangeException(string.Empty, "The Armor Points must be greater than 0.");
 			}
-		} 
+		}
+
+		public LightLeatherVest()
+		{
+			this.armorPoints = 20;
+		}
 	}
 }
