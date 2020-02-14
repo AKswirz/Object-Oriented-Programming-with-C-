@@ -11,9 +11,11 @@ namespace My_Magic_Destroyers
     {
         static void Main(string[] args)
         {
-            Warlock warlock = new Warlock();
+            Warlock firstWarlock = new Warlock();
+            Warlock secondWarlock = new Warlock("Second", 2);
+            Warlock thirdWarlock = new Warlock("Third", 3, 99);
 
-            Console.WriteLine(warlock.Name + "'s bodyarmor has " + warlock.BodyArmor.ArmorPoints + " points. His sword can do " + warlock.Weapon.Damage + " points of damage.");
+            Console.WriteLine(firstWarlock.Name + "'s bodyarmor has " + firstWarlock.BodyArmor.ArmorPoints + " points. His sword can do " + firstWarlock.Weapon.Damage + " points of damage.");
         }
     }
 }

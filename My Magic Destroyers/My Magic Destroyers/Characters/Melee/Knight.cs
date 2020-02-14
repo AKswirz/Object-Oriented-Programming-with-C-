@@ -10,17 +10,36 @@ namespace My_Magic_Destroyers.Characters.Melee
 {
     public class Knight
     {
+        private string name;
+        private int level;
+        private int healthPoints;
         private int abilityPoints;
         private string faction;
-        private int healthPoints;
-        private int level;
-        private string name;
         private Chainlink bodyArmor;
         private Hammer weapon;
 
         public Knight()
+            : this("Gene Ric", 1)
         {
 
+        }
+
+        public Knight(string name, int level)
+            : this(name, level, 1)
+        {
+            this.name = name;
+            this.level = level;
+        }
+
+        public Knight(string name, int level, int healthPoints)
+        {
+            this.name = name;
+            this.level = level;
+            this.healthPoints = healthPoints;
+            this.AbilityPoints = 100;
+            this.Faction = "Melee";
+            this.BodyArmor = new Chainlink();
+            this.Weapon = new Hammer();
         }
 
         public int AbilityPoints

@@ -10,21 +10,33 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
 {
     public class Warlock
     {
+        private string name;
+        private int level;
+        private int healthPoints;
         private int abilityPoints;
         private string faction;
-        private int healthPoints;
-        private int level;
-        private string name;
         private LightLeatherVest bodyArmor;
         private Sword weapon;
 
         public Warlock()
+            : this("Gene Ric", 1)
+        {        
+        }
+
+        public Warlock(string name, int level)
+            : this(name, level, 100)
         {
-            this.AbilityPoints = 10;
+            this.name = name;
+            this.level = level;
+        }
+
+        public Warlock(string name, int level, int healthPoints)
+        {
+            this.Name = name;
+            this.Level = level;
+            this.HealthPoints = healthPoints;
+            this.AbilityPoints = 100;
             this.Faction = "SpellCaster";
-            this.HealthPoints = 100;
-            this.Level = 1;
-            this.Name = "Gene Ric";
             this.BodyArmor = new LightLeatherVest();
             this.Weapon = new Sword();
         }

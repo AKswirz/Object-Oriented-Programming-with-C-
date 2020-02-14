@@ -10,17 +10,35 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
 {
     public class Druid
     {
+        private string name;
+        private int level;
+        private int healthPoints;
         private int abilityPoints;
         private string faction;
-        private int healthPoints;
-        private int level;
-        private string name;
         private LightLeatherVest bodyArmor;
         private Staff weapon;
 
         public Druid()
+            : this("Gene Ric", 1)
         {
+        }
 
+        public Druid(string name, int level)
+            : this(name, level, 100)
+        {
+            this.name = name;
+            this.level = level;
+        }
+
+        public Druid(string name, int level, int healthPoints)
+        {
+            this.name = name;
+            this.level = level;
+            this.healthPoints = healthPoints;
+            this.AbilityPoints = 100;
+            this.Faction = "SpellCaster";
+            this.BodyArmor = new LightLeatherVest();
+            this.Weapon = new Staff();
         }
 
         public int AbilityPoints

@@ -10,17 +10,35 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
 {
     public class Mage
     {
+        private string name;
+        private int level;
+        private int healthPoints;
         private int abilityPoints;
         private string faction;
-        private int healthPoints;
-        private int level;
-        private string name;
         private ClothRobe bodyArmor;
         private Staff weapon;
 
         public Mage()
+            : this("Gene Ric", 1)
+        {            
+        }
+
+        public Mage(string name, int level)
+            : this(name, level, 100)
         {
-            
+            this.name = name;
+            this.level = level;
+        }
+
+        public Mage(string name, int level, int healthPoints)
+        {
+            this.name = name;
+            this.level = level;
+            this.healthPoints = healthPoints;
+            this.AbilityPoints = 100;
+            this.Faction = "SpellCaster";
+            this.BodyArmor = new ClothRobe();
+            this.Weapon = new Staff();
         }
 
         public int AbilityPoints
