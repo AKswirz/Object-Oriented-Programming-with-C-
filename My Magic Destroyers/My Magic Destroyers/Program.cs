@@ -20,6 +20,8 @@ namespace My_Magic_Destroyers
             Console.WriteLine(firstWarlock.Name + ", there are " + Warlock.IdCounter + " warlocks and I have ID# " + firstWarlock.Id);
 
             Console.WriteLine(Environment.NewLine + firstWarlock.Name + "'s bodyarmor has " + firstWarlock.BodyArmor.ArmorPoints + " points. His sword can do " + firstWarlock.Weapon.Damage + " points of damage.");
+
+            Warlock.GetDefaultValues();
         }
     }
 }

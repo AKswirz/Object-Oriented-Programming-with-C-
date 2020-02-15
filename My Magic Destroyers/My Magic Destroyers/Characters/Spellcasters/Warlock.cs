@@ -30,6 +30,7 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
         private const int DEFAULT_HEIGHT = 170;
         private const int DEFAULT_WEIGHT = 70;
         private const int DEFAULT_AGE = 18;
+
         private readonly LightLeatherVest DEFAULT_BODYARMOR = new LightLeatherVest();
         private readonly Sword DEFAULT_WEAPON = new Sword();
 
@@ -155,6 +156,18 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
         public void BoneShield()
         {
             throw new NotImplementedException();
+        }
+
+        public static void GetDefaultValues()
+        {
+            Console.WriteLine(Environment.NewLine + $"Default Name: {DEFAULT_NAME}" + Environment.NewLine +
+                $"Default Level: {DEFAULT_LEVEL}" + Environment.NewLine +
+                $"Default Healthpoints: {DEFAULT_HEALTHPOINTS}" + Environment.NewLine +
+                $"Default Abilitypoints: {DEFAULT_ABILITYPOINTS}" + Environment.NewLine +
+                $"Default Faction: {DEFAULT_FACTION}" + Environment.NewLine +
+                $"Default Height: {DEFAULT_HEIGHT}" + Environment.NewLine +
+                $"Default Weight: {DEFAULT_WEIGHT}" + Environment.NewLine +
+                $"Default Age: {DEFAULT_AGE}" + Environment.NewLine);
         }
     }
 }
