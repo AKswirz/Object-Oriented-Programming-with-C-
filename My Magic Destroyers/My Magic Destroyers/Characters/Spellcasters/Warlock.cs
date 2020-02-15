@@ -10,6 +10,10 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
 {
     public class Warlock
     {
+
+        private static int idCounter;
+        private readonly int id;      
+
         private string name;
         private int level;
         private int healthPoints;
@@ -18,13 +22,25 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
         private LightLeatherVest bodyArmor;
         private Sword weapon;
 
+        private const string DEFAULT_NAME = "Gene Ric";
+        private const int DEFAULT_LEVEL = 1;
+        private const int DEFAULT_HEALTHPOINTS = 100;
+        private const int DEFAULT_ABILITYPOINTS = 100;
+        private const string DEFAULT_FACTION = "SpellCaster";
+        private const int DEFAULT_HEIGHT = 170;
+        private const int DEFAULT_WEIGHT = 70;
+        private const int DEFAULT_AGE = 18;
+        private readonly LightLeatherVest DEFAULT_BODYARMOR = new LightLeatherVest();
+        private readonly Sword DEFAULT_WEAPON = new Sword();
+
+
         public Warlock()
-            : this("Gene Ric", 1)
+            : this(DEFAULT_NAME, DEFAULT_LEVEL)
         {        
         }
 
         public Warlock(string name, int level)
-            : this(name, level, 100)
+            : this(name, level, DEFAULT_HEALTHPOINTS)
         {
             this.name = name;
             this.level = level;
@@ -35,10 +51,27 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
             this.Name = name;
             this.Level = level;
             this.HealthPoints = healthPoints;
-            this.AbilityPoints = 100;
-            this.Faction = "SpellCaster";
-            this.BodyArmor = new LightLeatherVest();
-            this.Weapon = new Sword();
+            this.AbilityPoints = DEFAULT_ABILITYPOINTS;
+            this.Faction = DEFAULT_FACTION;
+            this.BodyArmor = DEFAULT_BODYARMOR;
+            this.Weapon = DEFAULT_WEAPON;
+
+
+            idCounter++;
+            //this.Id = IdCounter;
+            this.id = IdCounter;
+        }
+
+        public static int IdCounter
+        {
+            get { return Warlock.idCounter; }
+            private set { idCounter = value; }
+        }
+
+        public int Id
+        {
+            get { return this.id; }
+            //private set { this.id = value; }
         }
 
         public int AbilityPoints

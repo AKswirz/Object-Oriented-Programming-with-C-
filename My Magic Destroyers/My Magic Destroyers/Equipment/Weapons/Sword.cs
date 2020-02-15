@@ -9,6 +9,7 @@ namespace My_Magic_Destroyers.Equipment.Weapons
     public class Sword
     {
         private int damage;
+        private const int DEFAULT_DAMAGE = 10;
 
         public int Damage
         {
@@ -26,7 +27,7 @@ namespace My_Magic_Destroyers.Equipment.Weapons
 
         public Sword()
         {
-            this.Damage = 10;
+            this.Damage = DEFAULT_DAMAGE;
         }
         public void Bloodthirst()
         {

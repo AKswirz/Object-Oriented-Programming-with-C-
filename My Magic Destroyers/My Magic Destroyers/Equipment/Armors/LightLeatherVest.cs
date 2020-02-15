@@ -9,6 +9,7 @@ namespace My_Magic_Destroyers.Equipment.Armors
     public class LightLeatherVest
     {
 		private int armorPoints;
+		private const int DEFAULT_ARMORPOINTS = 25;
 
 		public int ArmorPoints
 		{
@@ -26,7 +27,7 @@ namespace My_Magic_Destroyers.Equipment.Armors
 
 		public LightLeatherVest()
 		{
-			this.armorPoints = 20;
+			this.armorPoints = DEFAULT_ARMORPOINTS;
 		}
 	}
 }
