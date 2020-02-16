@@ -15,7 +15,8 @@ namespace My_Magic_Destroyers
             Warlock firstWarlock = new Warlock();
             Warlock secondWarlock = new Warlock("George II", 2);
             Warlock thirdWarlock = new Warlock("William III", 3, 99);
-            Warlock fourthWarlock = new Warlock("Henry IV", 4, 95, "Melee");
+            //Warlock fourthWarlock = new Warlock("Henry IV", 4, 95, "Melee");
+            Warlock fourthWarlock = new Warlock("Henry IV", 4, 95, Faction.Melee);
 
             var text = string.Format($"Name is {0} and I belong to the {1} faction. There are {2} warlocks, my ID # is {3}");
             var text1 = string.Format("Name is {0} belonging to the {1} faction. There are {2} warlocks, ID # is {3} and health is a {4}.", firstWarlock.Name, firstWarlock.Faction, Warlock.IdCounter, firstWarlock.Id, firstWarlock.HealthPoints);

@@ -8,6 +8,7 @@ namespace My_Magic_Destroyers.Enumerations
 {
     public enum Faction
     {
+        Default,
         Melee,
         SpellCaster
     }

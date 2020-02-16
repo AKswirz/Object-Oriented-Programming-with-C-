@@ -19,7 +19,8 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
         private int level;
         private int healthPoints;
         private int abilityPoints;
-        private string faction;
+        //private string faction;
+        private Faction faction;
         private LightLeatherVest bodyArmor;
         private Sword weapon;
 
@@ -27,7 +28,8 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
         private const int DEFAULT_LEVEL = 1;
         private const int DEFAULT_HEALTHPOINTS = 100;
         private const int DEFAULT_ABILITYPOINTS = 100;
-        private const string DEFAULT_FACTION = "SpellCaster";
+        //private const string DEFAULT_FACTION = "SpellCaster";
+        //private const Faction DEFAULT_FACTION = Faction.SpellCaster;
         private const int DEFAULT_HEIGHT = 170;
         private const int DEFAULT_WEIGHT = 70;
         private const int DEFAULT_AGE = 18;
@@ -49,23 +51,26 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
         }
 
         public Warlock(string name, int level, int healthPoints)
-            : this(name, level, healthPoints, DEFAULT_FACTION)
+            : this(name, level, healthPoints, Faction.Default)
         {
             this.name = name;
             this.level = level;
         }
 
-        public Warlock(string name, int level, int healthPoints, string faction)
+        //public Warlock(string name, int level, int healthPoints, string faction)
+        public Warlock(string name, int level, int healthPoints, Faction faction)
         {
             this.Name = name;
             this.Level = level;        
             this.AbilityPoints = DEFAULT_ABILITYPOINTS;
+            //this.Faction = faction;
             this.Faction = faction;
             this.BodyArmor = DEFAULT_BODYARMOR;
             this.Weapon = DEFAULT_WEAPON;
-            if (this.Faction == "SpellCaster")
+            //if (this.Faction == "SpellCaster")
+            if (this.Faction == Faction.Default)
             {
-                this.HealthPoints = 85;
+                this.HealthPoints = 50;
             }
             else
                 this.HealthPoints = healthPoints;
@@ -99,7 +104,16 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
             }
         }
 
-        public string Faction
+        //public string Faction
+        //{
+        //    get { return faction; }
+        //    private set
+        //    {
+        //        this.faction = value;
+        //    }
+        //}
+        
+        public Faction Faction
         {
             get { return faction; }
             private set
@@ -169,7 +183,9 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
 
         public static void GetDefaultValues()
         {
-            Console.WriteLine(Environment.NewLine + $"Default Name: {DEFAULT_NAME}" + Environment.NewLine +
+            Console.WriteLine(Environment.NewLine + $"The default variable values are:" + Environment.NewLine +
+                $"=====================================" + Environment.NewLine +
+                $"Default Name: {DEFAULT_NAME}" + Environment.NewLine +
                 $"Default Level: {DEFAULT_LEVEL}" + Environment.NewLine +
                 $"Default Healthpoints: {DEFAULT_HEALTHPOINTS}" + Environment.NewLine +
                 $"Default Abilitypoints: {DEFAULT_ABILITYPOINTS}" + Environment.NewLine +
