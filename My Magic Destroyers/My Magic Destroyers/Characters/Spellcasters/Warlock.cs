@@ -1,4 +1,5 @@
-﻿using My_Magic_Destroyers.Equipment.Armors;
+﻿using My_Magic_Destroyers.Enumerations;
+using My_Magic_Destroyers.Equipment.Armors;
 using My_Magic_Destroyers.Equipment.Weapons;
 using System;
 using System.Collections.Generic;
@@ -44,19 +45,30 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
             : this(name, level, DEFAULT_HEALTHPOINTS)
         {
             this.name = name;
-            this.level = level;
+            this.level = level;      
         }
 
         public Warlock(string name, int level, int healthPoints)
+            : this(name, level, healthPoints, DEFAULT_FACTION)
+        {
+            this.name = name;
+            this.level = level;
+        }
+
+        public Warlock(string name, int level, int healthPoints, string faction)
         {
             this.Name = name;
-            this.Level = level;
-            this.HealthPoints = healthPoints;
+            this.Level = level;        
             this.AbilityPoints = DEFAULT_ABILITYPOINTS;
-            this.Faction = DEFAULT_FACTION;
+            this.Faction = faction;
             this.BodyArmor = DEFAULT_BODYARMOR;
             this.Weapon = DEFAULT_WEAPON;
-
+            if (this.Faction == "SpellCaster")
+            {
+                this.HealthPoints = 85;
+            }
+            else
+                this.HealthPoints = healthPoints;
 
             idCounter++;
             //this.Id = IdCounter;
@@ -85,17 +97,14 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
                 else
                     throw new ArgumentOutOfRangeException(string.Empty, "Ability Points cannot be less than 0.");
             }
-        }        
+        }
 
         public string Faction
         {
             get { return faction; }
-            set
+            private set
             {
-                if (value.ToLower() == "melee" || value.ToLower() == "spellcaster")
-                    faction = value;
-                else
-                    throw new ArgumentOutOfRangeException(string.Empty, "The Faction is either Melee or SpellCaster.");
+                this.faction = value;
             }
         }
 
@@ -164,7 +173,7 @@ namespace My_Magic_Destroyers.Characters.Spellcasters
                 $"Default Level: {DEFAULT_LEVEL}" + Environment.NewLine +
                 $"Default Healthpoints: {DEFAULT_HEALTHPOINTS}" + Environment.NewLine +
                 $"Default Abilitypoints: {DEFAULT_ABILITYPOINTS}" + Environment.NewLine +
-                $"Default Faction: {DEFAULT_FACTION}" + Environment.NewLine +
+                //$"Default Faction: {DEFAULT_FACTION}" + Environment.NewLine +
                 $"Default Height: {DEFAULT_HEIGHT}" + Environment.NewLine +
                 $"Default Weight: {DEFAULT_WEIGHT}" + Environment.NewLine +
                 $"Default Age: {DEFAULT_AGE}" + Environment.NewLine);
